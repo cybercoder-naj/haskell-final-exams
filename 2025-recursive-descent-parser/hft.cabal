@@ -1,0 +1,25 @@
+cabal-version:      3.0
+-- WARNING: YOU MUST NOT UNDER ANY CIRCUMSTANCES EDIT THIS FILE, YOU HAVE BEEN WARNED
+name:               hft
+version:            0.1.0.0
+synopsis:           Haskell Final Test 24/25
+author:             Imperial College London
+maintainer:         j.willis19@imperial.ac.uk
+build-type:         Simple
+
+library
+    exposed-modules:  Parser, Types, Lexer, Examples
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    build-depends:    base >=4.13 && <5,
+                      containers
+
+test-suite hft-test
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    default-language: Haskell2010
+    other-modules:    IC.TestSuite
+    main-is:          Tests.hs
+    ghc-options:      -threaded
+    build-depends:    hft,
+                      base >=4.13 && <5

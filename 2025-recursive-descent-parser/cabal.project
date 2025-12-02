@@ -1,0 +1,4 @@
+packages:.
+-- TODO: enable this before test
+-- with-compiler:/usr/bin/ghc
+tests: True
